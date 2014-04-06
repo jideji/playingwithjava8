@@ -19,7 +19,7 @@ public class Concurrent<F> {
     }
 
     public static <F> Concurrent<F> concurrentlyOn(List<F> originalList) {
-	return new Concurrent(originalList);
+	return new Concurrent<>(originalList);
     }
 
     public <T> Stream<T> perform(Function<F, T> op) {
